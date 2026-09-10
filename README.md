@@ -1,4 +1,4 @@
-# Blue Zone: Private Cloud
+# Blå sone: Private Cloud
 
 ## Ready to enter the zone?
 
