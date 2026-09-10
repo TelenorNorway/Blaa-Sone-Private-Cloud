@@ -6,17 +6,33 @@ Bring your laptop, curiosity, and a willingness to investigate. You will deploy 
 
 ### Software requirements
 
-For macOS running docker requires [docker desktop](https://www.docker.com/products/docker-desktop/) or [colima](https://github.com/abiosoft/colima)
+You'll need **Docker** and **Kubernetes** to complete this workshop. Choose the options that work for your operating system.
 
-On Windows we recommend running [WSL](https://learn.microsoft.com/en-us/windows/wsl/about) you can [download](https://learn.microsoft.com/en-us/windows/wsl/install) it here
+#### macOS
 
-If you are running linux you can look at the links below
+Choose one container runtime:
+- **[Docker Desktop](https://www.docker.com/products/docker-desktop/)** – Official Docker implementation for macOS
+- **[Colima](https://github.com/abiosoft/colima)** – Lightweight Docker alternative using Lima
 
-There are multiple options when it comes to hosting and running k8s some solutions are:
+#### Windows
 
-- [docker-desktop](https://www.docker.com/products/docker-desktop/)
-- [minikube](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fmacos%2Fx86-64%2Fstable%2Fbinary+download)
-- [k3s](https://k3s.io/)
+We recommend **[WSL 2](https://learn.microsoft.com/en-us/windows/wsl/)** (Windows Subsystem for Linux):
+- [Installation guide](https://learn.microsoft.com/en-us/windows/wsl/install)
+- Then install Docker Desktop or one of the Kubernetes options below
+
+#### Linux
+
+Follow the documentation for your distribution on the upstream project sites.
+
+#### Kubernetes cluster
+
+Choose one option to run Kubernetes locally:
+
+| Option | Link | Best for |
+| --- | --- | --- |
+| **Docker Desktop** | [docker.com](https://www.docker.com/products/docker-desktop/) | Integrated with Docker, easiest setup |
+| **Minikube** | [minikube.sigs.k8s.io](https://minikube.sigs.k8s.io/docs/start/) | Testing and learning, supports multiple drivers |
+| **K3s** | [k3s.io](https://k3s.io/) | Lightweight, minimal resource usage |
 
 ## The challenge
 
