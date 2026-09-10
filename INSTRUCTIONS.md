@@ -1,4 +1,4 @@
-# Blue Zone: Workshop Instructions
+# Blå sone: Workshop Instructions
 
 ## Before you start
 
@@ -6,7 +6,7 @@ Bring your laptop, curiosity, and a willingness to investigate. You will deploy 
 
 ### Software requirements
 
-You'll need **Docker** and **Kubernetes** to complete this workshop. Choose the options that work for your operating system.
+You'll need an container runtime and **Kubernetes** to complete this workshop. Choose the options that work for your operating system.
 
 #### macOS
 
@@ -20,7 +20,7 @@ We recommend **[WSL 2](https://learn.microsoft.com/en-us/windows/wsl/)** (Window
 - [Installation guide](https://learn.microsoft.com/en-us/windows/wsl/install)
 - Then install Docker Desktop or one of the Kubernetes options below
 
-#### Linux
+#### Linux and BSD
 
 Follow the documentation for your distribution on the upstream project sites.
 
