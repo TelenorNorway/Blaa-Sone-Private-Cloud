@@ -1,5 +1,4 @@
-# Student-created Kubernetes manifests. Reference manifests live in examples/k8s/.
-/k8s/
+examples/k8s/
 
 # Local Python environments and cache files for the backend exercise.
 /.venv/
