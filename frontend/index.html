@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#18213e" />
+    <title>Blå sone | Status for din private sky</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-content">
+        <a class="brand" href="/" aria-label="Telenor Blå sone">
+          <img class="brand-mark" src="telenorlogo.svg" alt="" />
+          <span>TELENOR</span>
+        </a>
+        <span class="event-label">blå sone</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-content">
+          <p class="eyebrow">Private Cloud workshop</p>
+          <h1 id="page-title">Status for din<br />private sky.</h1>
+          <p class="intro">Her ser du om tjenestene dine snakker sammen i Kubernetes-klyngen.</p>
+        </div>
+        <div class="cloud-shape" aria-hidden="true"><span></span><span></span><span></span></div>
+      </section>
+
+      <section class="workspace" aria-labelledby="status-title">
+        <div class="workspace-heading">
+          <div>
+            <p class="eyebrow eyebrow-dark">Sjekkpunkt</p>
+            <h2 id="status-title">Er alt på plass?</h2>
+          </div>
+          <p>Frontend spør backend. Backend sjekker om den når frontend-tjenesten gjennom Kubernetes-nettverket.</p>
+        </div>
+
+        <section class="status-card" aria-live="polite">
+          <div class="status-card-heading">
+            <div>
+              <p class="card-kicker">Live status</p>
+              <h3>Din klynge</h3>
+            </div>
+            <span id="overall-status" class="badge badge-pending">Sjekker</span>
+          </div>
+          <dl class="status-list">
+            <div><dt>Backend API</dt><dd id="api-status">Venter på svar</dd></div>
+            <div><dt>Internt nettverk</dt><dd id="network-status">Venter på svar</dd></div>
+            <div><dt>Sist sjekket</dt><dd id="last-checked">Ikke sjekket ennå</dd></div>
+          </dl>
+          <p id="status-message" class="status-message">Kontakter API-et gjennom Kubernetes-tjenesten...</p>
+          <button id="refresh-button" type="button">Sjekk status på nytt</button>
+        </section>
+
+        <aside class="hint-card">
+          <p class="card-kicker">Når noe feiler</p>
+          <h3>Start med poddene.</h3>
+          <p>Se etter podder som ikke er klare, og kontroller deretter tjenestenavn og porter i manifestene dine.</p>
+          <code>kubectl get pods,services</code>
+        </aside>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
