@@ -22,9 +22,10 @@ async function checkStatus() {
 
 		const status = await response.json();
 		const networkOk = status.network === "ok";
-		setBadge(networkOk ? "ok" : "error", networkOk ? "I orden" : "Fant feil");
+		const networkUnsafe = status.network === "unsafe";
+		setBadge(networkOk ? "ok" : "error", networkOk ? "I orden" : networkUnsafe ? "Utrygt" : "Fant feil");
 		elements.api.textContent = status.api || "OK";
-		elements.network.textContent = networkOk ? "Tilkoblet" : "Utilgjengelig";
+		elements.network.textContent = networkOk ? "Tilkoblet" : networkUnsafe ? "Utrygt" : "Utilgjengelig";
 		elements.message.textContent =
 			status.message || "Backend er tilgjengelig gjennom Kubernetes-tjenesten.";
 	} catch (error) {

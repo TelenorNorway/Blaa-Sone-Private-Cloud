@@ -52,7 +52,8 @@ The frontend and backend are deliberately connected through Kubernetes networkin
 3. Make the frontend available locally using your preferred Kubernetes access method.
 4. Open the status page and observe the result.
 5. Use Kubernetes to find and fix the issue that prevents the services from communicating.
-6. Refresh the page. You are done when both the API and internal network are healthy.
+6. Apply `examples/k8s/network-policies.yaml` to protect traffic between the frontend and backend.
+7. Refresh the page. You are done when both the API and internal network are healthy.
 
 ## Useful checkpoints
 
@@ -64,6 +65,7 @@ kubectl get deployments
 kubectl describe pod <pod-name>
 kubectl logs <pod-name>
 kubectl get endpoints
+kubectl get networkpolicies
 ```
 
 Look for:
