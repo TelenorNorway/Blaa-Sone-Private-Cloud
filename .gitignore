@@ -1,5 +1,4 @@
 examples/* 
-*/Dockerfile
 
 # Local Python environments and cache files for the backend exercise.
 /.venv/
