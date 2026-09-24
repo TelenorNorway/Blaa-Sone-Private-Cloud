@@ -11,12 +11,14 @@ You'll need an container runtime and **Kubernetes** to complete this workshop. C
 #### macOS
 
 Choose one container runtime:
+
 - **[Docker Desktop](https://www.docker.com/products/docker-desktop/)** – Official Docker implementation for macOS
 - **[Colima](https://github.com/abiosoft/colima)** – Lightweight Docker alternative using Lima
 
 #### Windows
 
 We recommend **[WSL 2](https://learn.microsoft.com/en-us/windows/wsl/)** (Windows Subsystem for Linux):
+
 - [Installation guide](https://learn.microsoft.com/en-us/windows/wsl/install)
 - Then install Docker Desktop or one of the Kubernetes options below
 
@@ -28,11 +30,11 @@ Follow the documentation for your distribution on the upstream project sites.
 
 Choose one option to run Kubernetes locally:
 
-| Option | Link | Best for |
-| --- | --- | --- |
-| **Docker Desktop** | [docker.com](https://www.docker.com/products/docker-desktop/) | Integrated with Docker, easiest setup |
-| **Minikube** | [minikube.sigs.k8s.io](https://minikube.sigs.k8s.io/docs/start/) | Testing and learning, supports multiple drivers |
-| **K3s** | [k3s.io](https://k3s.io/) | Lightweight, minimal resource usage |
+| Option             | Link                                                             | Best for                                        |
+| ------------------ | ---------------------------------------------------------------- | ----------------------------------------------- |
+| **Docker Desktop** | [docker.com](https://www.docker.com/products/docker-desktop/)    | Integrated with Docker, easiest setup           |
+| **Minikube**       | [minikube.sigs.k8s.io](https://minikube.sigs.k8s.io/docs/start/) | Testing and learning, supports multiple drivers |
+| **K3s**            | [k3s.io](https://k3s.io/)                                        | Lightweight, minimal resource usage             |
 
 ## The challenge
 
@@ -48,11 +50,11 @@ The frontend and backend are deliberately connected through Kubernetes networkin
 ## Suggested path
 
 1. Build the frontend and backend container images from `frontend/` and `backend/`.
-2. Deploy the Kubernetes manifests in `examples/k8s/`.
+2. Deploy the Kubernetes manifests in your own deployment folder:.
 3. Make the frontend available locally using your preferred Kubernetes access method.
 4. Open the status page and observe the result.
 5. Use Kubernetes to find and fix the issue that prevents the services from communicating.
-6. Apply `examples/k8s/network-policies.yaml` to protect traffic between the frontend and backend.
+6. Apply your own network-config.yaml to protect traffic between the frontend and backend.
 7. Refresh the page. You are done when both the API and internal network are healthy.
 
 ## Useful checkpoints

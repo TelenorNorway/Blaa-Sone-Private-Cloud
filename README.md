@@ -30,7 +30,7 @@ The status page shows:
 - **Internal network:** Connected
 - **Cluster status:** Healthy
 
-The backend also verifies that the required default-deny and workload-specific NetworkPolicies are active. Apply `examples/k8s/network-policies.yaml` after deploying the application manifests.
+The backend also verifies that the required default-deny and workload-specific NetworkPolicies are active. Apply your own config yaml after deploying the application manifests.
 
 Start with the pods. Then follow the services, ports, probes, logs, and DNS. The answer is in the cluster.
 
